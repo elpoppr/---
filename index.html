@@ -2,48 +2,48 @@
 <html lang="ar">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ÅÏÇÑÉ ÇáãÕÑæİÇÊ</title>
+    <title>Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…ØµØ±ÙˆÙØ§Øª</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-6">
 
-    <h1 class="text-2xl font-bold mb-4">ÅÏÇÑÉ ÇáãÕÑæİÇÊ</h1>
+    <h1 class="text-2xl font-bold mb-4">Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…ØµØ±ÙˆÙØ§Øª</h1>
 
-    <!-- ÇáÑÕíÏ ÇáÍÇáí -->
+    <!-- Ø§Ù„Ø±ØµÙŠØ¯ Ø§Ù„Ø­Ø§Ù„ÙŠ -->
     <div class="bg-gray-800 p-4 rounded-lg shadow-lg text-center mb-4 w-64">
-        <h2 class="text-lg font-semibold">ÇáÑÕíÏ ÇáÍÇáí:</h2>
-        <p id="balance" class="text-2xl font-bold text-green-400">0 ÑíÇá</p>
+        <h2 class="text-lg font-semibold">Ø§Ù„Ø±ØµÙŠØ¯ Ø§Ù„Ø­Ø§Ù„ÙŠ:</h2>
+        <p id="balance" class="text-2xl font-bold text-green-400">0 Ø±ÙŠØ§Ù„</p>
     </div>
 
-    <!-- ÅÏÎÇá ÇáÈíÇäÇÊ -->
+    <!-- Ø¥Ø¯Ø®Ø§Ù„ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª -->
     <div class="bg-gray-800 p-4 rounded-lg shadow-lg w-64">
-        <input id="amount" type="number" placeholder="ÃÏÎá ÇáãÈáÛ" class="w-full p-2 mb-2 rounded bg-gray-700 text-white">
-        <input id="note" type="text" placeholder="ÃÏÎá ãáÇÍÙÉ" class="w-full p-2 mb-2 rounded bg-gray-700 text-white">
+        <input id="amount" type="number" placeholder="Ø£Ø¯Ø®Ù„ Ø§Ù„Ù…Ø¨Ù„Øº" class="w-full p-2 mb-2 rounded bg-gray-700 text-white">
+        <input id="note" type="text" placeholder="Ø£Ø¯Ø®Ù„ Ù…Ù„Ø§Ø­Ø¸Ø©" class="w-full p-2 mb-2 rounded bg-gray-700 text-white">
         <div class="flex justify-between">
-            <button id="addIncome" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded"> ÅÖÇİÉ</button>
-            <button id="addExpense" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded"> ÎÕã</button>
+            <button id="addIncome" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded"> Ø¥Ø¶Ø§ÙØ©</button>
+            <button id="addExpense" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded"> Ø®ØµÙ…</button>
         </div>
     </div>
 
-    <!-- ŞÇÆãÉ ÇáÚãáíÇÊ -->
+    <!-- Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¹Ù…Ù„ÙŠØ§Øª -->
     <div class="bg-gray-800 p-4 rounded-lg shadow-lg mt-4 w-64">
-        <h2 class="text-lg font-semibold mb-2">ÇáÚãáíÇÊ:</h2>
+        <h2 class="text-lg font-semibold mb-2">Ø§Ù„Ø¹Ù…Ù„ÙŠØ§Øª:</h2>
         <ul id="transactions" class="space-y-2"></ul>
     </div>
 
-    <!-- ÒÑ ÅÚÇÏÉ ÇáÊÚííä -->
+    <!-- Ø²Ø± Ø¥Ø¹Ø§Ø¯Ø© Ø§Ù„ØªØ¹ÙŠÙŠÙ† -->
     <button id="resetBtn" class="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg mt-4">
-        ÅÚÇÏÉ ÇáÊÚííä
+        Ø¥Ø¹Ø§Ø¯Ø© Ø§Ù„ØªØ¹ÙŠÙŠÙ†
     </button>
 
-    <!-- äÇİĞÉ ÇáÊÃßíÏ (ãÎİíÉ İí ÇáÈÏÇíÉ) -->
+    <!-- Ù†Ø§ÙØ°Ø© Ø§Ù„ØªØ£ÙƒÙŠØ¯ (Ù…Ø®ÙÙŠØ© ÙÙŠ Ø§Ù„Ø¨Ø¯Ø§ÙŠØ©) -->
     <div id="confirmBox" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
         <div class="w-[250px] p-4 bg-gray-800 border border-gray-700 shadow-lg rounded-2xl text-center">
-            <h2 class="text-xl font-bold py-4 text-gray-200">åá ÃäÊ ãÊÃßÏ¿</h2>
-            <p class="text-sm text-gray-500 px-2">ÓíÊã ãÓÍ ÌãíÚ ÇáÈíÇäÇÊ äåÇÆíğÇ!</p>
+            <h2 class="text-xl font-bold py-4 text-gray-200">Ù‡Ù„ Ø£Ù†Øª Ù…ØªØ£ÙƒØ¯ØŸ</h2>
+            <p class="text-sm text-gray-500 px-2">Ø³ÙŠØªÙ… Ù…Ø³Ø­ Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ù†Ù‡Ø§Ø¦ÙŠÙ‹Ø§!</p>
             <div class="mt-4 flex justify-center gap-4">
-                <button id="cancelBtn" class="bg-gray-700 hover:bg-gray-800 text-gray-300 px-4 py-2 rounded-lg">ÅáÛÇÁ</button>
-                <button id="confirmReset" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg">ÊÃßíÏ</button>
+                <button id="cancelBtn" class="bg-gray-700 hover:bg-gray-800 text-gray-300 px-4 py-2 rounded-lg">Ø¥Ù„ØºØ§Ø¡</button>
+                <button id="confirmReset" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg">ØªØ£ÙƒÙŠØ¯</button>
             </div>
         </div>
     </div>
@@ -64,15 +64,15 @@
         let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
 
         function updateUI() {
-            balanceEl.textContent = `${balance} Ìäíå ãÕÑí`;
+            balanceEl.textContent = `${balance} Ø¬Ù†ÙŠÙ‡ Ù…ØµØ±ÙŠ`;
             transactionsEl.innerHTML = "";
             transactions.forEach((transaction, index) => {
                 const li = document.createElement("li");
                 li.classList.add("p-2", "rounded", "text-sm", "flex", "justify-between", "items-center");
                 li.classList.add(transaction.type === "income" ? "bg-green-600" : "bg-red-600");
                 li.innerHTML = `
-                    <span>${transaction.amount} Ìäíå ãÕÑí - ${transaction.note}</span>
-                    <button onclick="deleteTransaction(${index})" class="text-white bg-gray-700 px-2 py-1 rounded">ÍĞİ</button>
+                    <span>${transaction.amount} Ø¬Ù†ÙŠÙ‡ Ù…ØµØ±ÙŠ - ${transaction.note}</span>
+                    <button onclick="deleteTransaction(${index})" class="text-white bg-gray-700 px-2 py-1 rounded">Ø­Ø°Ù</button>
                 `;
                 transactionsEl.appendChild(li);
             });
@@ -83,15 +83,15 @@
 
         function addTransaction(type) {
             const amount = parseFloat(amountInput.value);
-            const note = noteInput.value.trim() || "ÈÏæä ãáÇÍÙÉ";
+            const note = noteInput.value.trim() || "Ø¨Ø¯ÙˆÙ† Ù…Ù„Ø§Ø­Ø¸Ø©";
 
             if (isNaN(amount) || amount <= 0) {
-                alert("íÑÌì ÅÏÎÇá ãÈáÛ ÕÍíÍ!");
+                alert("ÙŠØ±Ø¬Ù‰ Ø¥Ø¯Ø®Ø§Ù„ Ù…Ø¨Ù„Øº ØµØ­ÙŠØ­!");
                 return;
             }
 
             if (type === "expense" && amount > balance) {
-                alert("ÇáÑÕíÏ ÛíÑ ßÇİò!");
+                alert("Ø§Ù„Ø±ØµÙŠØ¯ ØºÙŠØ± ÙƒØ§ÙÙ!");
                 return;
             }
 
@@ -127,7 +127,7 @@
             localStorage.clear();
             updateUI();
             confirmBox.classList.add("hidden");
-            alert("Êã ãÓÍ ÌãíÚ ÇáÈíÇäÇÊ ÈäÌÇÍ!");
+            alert("ØªÙ… Ù…Ø³Ø­ Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ø¨Ù†Ø¬Ø§Ø­!");
         });
 
         updateUI();
