@@ -7,38 +7,41 @@
 </head>
 <body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-6">
 
-    <h1 class="text-2xl font-bold mb-4 text-center">مصروفي</h1>
+    <!-- الشعار -->
+    <img src="logo.webp" alt="لوجو" class="w-20 h-20 mb-4">
+    
+    <h1 class="text-2xl font-bold mb-4">مصروفي</h1>
 
     <!-- الرصيد الحالي -->
-    <div class="bg-gray-800 p-4 rounded-lg shadow-lg text-center mb-4 w-full max-w-xs">
+    <div class="bg-gray-800 p-4 rounded-lg shadow-lg text-center mb-4 w-64">
         <h2 class="text-lg font-semibold">الرصيد الحالي:</h2>
         <p id="balance" class="text-2xl font-bold text-green-400">0 ريال</p>
     </div>
 
     <!-- إدخال البيانات -->
-    <div class="bg-gray-800 p-4 rounded-lg shadow-lg w-full max-w-xs">
+    <div class="bg-gray-800 p-4 rounded-lg shadow-lg w-64">
         <input id="amount" type="number" placeholder="أدخل المبلغ" class="w-full p-2 mb-2 rounded bg-gray-700 text-white">
         <input id="note" type="text" placeholder="أدخل ملاحظة" class="w-full p-2 mb-2 rounded bg-gray-700 text-white">
-        <div class="flex justify-between gap-2">
-            <button id="addIncome" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded w-1/2"> إضافة</button>
-            <button id="addExpense" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded w-1/2"> خصم</button>
+        <div class="flex justify-between">
+            <button id="addIncome" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded"> إضافة</button>
+            <button id="addExpense" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded"> خصم</button>
         </div>
     </div>
 
     <!-- قائمة العمليات -->
-    <div class="bg-gray-800 p-4 rounded-lg shadow-lg mt-4 w-full max-w-xs">
+    <div class="bg-gray-800 p-4 rounded-lg shadow-lg mt-4 w-64">
         <h2 class="text-lg font-semibold mb-2">العمليات:</h2>
         <ul id="transactions" class="space-y-2"></ul>
     </div>
 
     <!-- زر إعادة التعيين -->
-    <button id="resetBtn" class="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg mt-4 w-full max-w-xs">
+    <button id="resetBtn" class="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg mt-4">
         إعادة التعيين
     </button>
 
     <!-- نافذة التأكيد (مخفية في البداية) -->
     <div id="confirmBox" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-        <div class="w-full max-w-xs p-4 bg-gray-800 border border-gray-700 shadow-lg rounded-2xl text-center">
+        <div class="w-[250px] p-4 bg-gray-800 border border-gray-700 shadow-lg rounded-2xl text-center">
             <h2 class="text-xl font-bold py-4 text-gray-200">هل أنت متأكد؟</h2>
             <p class="text-sm text-gray-500 px-2">سيتم مسح جميع البيانات نهائيًا!</p>
             <div class="mt-4 flex justify-center gap-4">
